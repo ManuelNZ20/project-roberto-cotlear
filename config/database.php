@@ -1,26 +1,33 @@
 <?php
 // Clase para la conexión a la base de datos
+require_once (__DIR__.'/config.php');
+
 class BaseConnection {
     private $driver;
-    private $host, $user, $pass, $database, $port, $charset;
+    private $host, $user, $pass, $database, $port;
     
     public function __construct() {
-        $db_cfg = require_once 'config/config.php';
-        $this->driver = $db_cfg["DRIVER"];
-        $this->host = $db_cfg["HOST"];
-        $this->user = $db_cfg["USER"];
-        $this->pass = $db_cfg["PASS"];
-        $this->database = $db_cfg["BASE"];
-        $this->port = $db_cfg["PORT"];
+        $this->driver = DRIVER;
+        $this->host = HOST;
+        $this->user = USER;
+        $this->pass = PASS;
+        $this->database = BASE;
+        $this->port = PORT;
     }
     
     public function connect() {
-        if ($this->driver == "mysql" || $this->driver == null) {
+        // Exepción para el control de errores
+        try {
             $con = new PDO($this->driver.':host='.$this->host.';dbname='.$this->database, $this->user, $this->pass);
-            $con->query("SET NAMES '".$this->charset."'");
+            echo 'Conexión exitosa';
+            return $con;
+        } catch (PDOException $e) {
+            echo 'Conexión Fallida';
+            echo $e->getMessage();
         }
-        
-        return $con;
+
     }
 }
+$base = new BaseConnection();
+$base->connect();
 ?>
