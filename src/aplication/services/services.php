@@ -1,0 +1,1 @@
+Los servicios en la capa de dominio se utilizan para encapsular operaciones o funcionalidades específicas que no son una parte natural de una entidad, pero que son importantes para la lógica de negocio en general. Estos servicios pueden realizar operaciones que involucran múltiples entidades o reglas de negocio más complejas.
