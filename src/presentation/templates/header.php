@@ -55,7 +55,7 @@ $url_base = 'http://localhost:3000';
           <li class="nav-item">
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dashboard administrativo
+                  Dashboard
                 </button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="<?php echo $url_base.'/src/presentation/views/admin/admin.php'?>">Inicio</a></li>
