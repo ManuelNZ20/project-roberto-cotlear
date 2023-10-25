@@ -22,11 +22,11 @@
   ?>   
 <!-- main -->
 <main class="container pt-4">
-    <h1>VISTA DE ADMINISTRADOR</h1>
-    <h1>VISTA DE ADMINISTRADOR</h1>
-    <h1>VISTA DE ADMINISTRADOR</h1>
-    <h1>VISTA DE ADMINISTRADOR</h1>
-    <h1>VISTA DE ADMINISTRADOR</h1>
+    <h1>VISTA DE PRODUCTOS</h1>
+    <h1>VISTA DE PRODUCTOS</h1>
+    <h1>VISTA DE PRODUCTOS</h1>
+    <h1>VISTA DE PRODUCTOS</h1>
+    <h1>VISTA DE PRODUCTOS</h1>
 </main>
 <!-- footer -->
 <!-- include('../../../presentation/templates/footer.php'); -->
